@@ -1,0 +1,59 @@
+CREATE TABLE USERS(
+	userID VARCHAR2(20),
+	userPassword VARCHAR2(20),
+	userName VARCHAR2(20),
+	userAge NUMBER,
+	userGender VARCHAR2(20),
+	userEmail VARCHAR2(50),
+	userProfile VARCHAR2(50)
+);
+
+ALTER TABLE USERS
+ADD CONSTRAINT PK_ID PRIMARY KEY (userID);
+
+
+SELECT *
+FROM USERS;
+
+DELETE FROM USERS
+WHERE USERID = '123';
+
+
+CREATE TABLE CHAT (
+	chatID NUMBER,
+	fromID VARCHAR2(20),
+	toID VARCHAR2(20),
+	chatContent VARCHAR2(100),
+	chatTime DATE,
+	CONSTRAINT PK_CHAT PRIMARY KEY (chatID)
+);
+
+CREATE SEQUENCE CHAT_SEQ
+INCREMENT BY 1
+START WITH 1;
+
+SELECT *
+FROM CHAT;
+
+
+SELECT * FROM CHAT
+WHERE ((fromID = 'aaa' AND toID = '123') OR (fromID = '123' AND toID = 'aaa'))
+	AND chatID > 10
+ORDER BY chatTime
+
+
+
+SELECT * FROM CHAT
+WHERE ((fromID = 'aaa' AND toID = '123') OR (fromID = '123' AND toID = 'aaa'))
+	AND chatID > (SELECT MAX(chatID) - 10 FROM CHAT)
+ORDER BY chatTime
+
+
+
+
+
+
+
+
+
+
