@@ -50,7 +50,7 @@
 				<!-- 드롭다운 메뉴 -->
 				<li class="dropdown">	
 					<a href="#" class="dropdown-toggle"
-						data-toggle="dropdown" role="buton" aria-haspopup="true"
+						data-toggle="dropdown" role="button" aria-haspopup="true"
 						aria-expanded="false">접속하기<span class="caret"></span>
 					</a>
 					<ul class="dropdown-menu">
@@ -63,6 +63,9 @@
 				} else {
 			%>
 			<ul class="nav navbar-nav navbar-right">
+				<li class="nav-item">
+     				<a class="nav-link disabled" tabindex="-1" aria-disabled="true"><%=userID %>님 반갑습니다</a>
+    			</li>
 				<li class="dropdown">	
 					<a href="#" class="dropdown-toggle"
 						data-toggle="dropdown" role="buton" aria-haspopup="true"

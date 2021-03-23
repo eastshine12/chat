@@ -22,7 +22,7 @@ public class DBConnection {
 		Connection conn = null;
 		
 		try {
-			conn = DriverManager.getConnection("jdbc:oracle:thin:@192.168.35.65:1521:xe", "hr", "hr");
+			conn = DriverManager.getConnection("jdbc:oracle:thin:@192.168.0.231:1521:xe", "hr", "hr");
 		
 			System.out.println("Oracle Connection Success");
 			

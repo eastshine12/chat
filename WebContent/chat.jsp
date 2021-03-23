@@ -123,7 +123,7 @@
 					'<div class="col-lg-12">' +
 						'<div class="media">' +
 							'<a class="pull-left" href="#">' +
-								'<img class="media-object img-circle" style="width: 30px; height: 30px;" src="images/icon.png" alt="">' +
+								'<img class="media-object img-circle" style="width: 33px; height: 33px;" src="images/icon.png" alt="">' +
 							'</a>' +
 							'<div class="media-body">' +
 								'<h4 class="media-heading">' +
@@ -162,7 +162,7 @@
 <body>
 
 	<!-- 네비게이션 -->
-	<nav class="navbar navbar-default">
+	<nav class="navbar navbar-dark bg-dark">
 		<!-- 좌측 상단 -->
  		
 		<div class="navbar-header">
@@ -183,10 +183,14 @@
 			</ul>
 			
 			<!-- 우측 상단 -->
+
 			<%	//비로그인
 				if(userID != null) {
 			%>
 			<ul class="nav navbar-nav navbar-right">
+				<li class="nav-item">
+     				<a class="nav-link disabled" tabindex="-1" aria-disabled="true"><%=userID %>님 반갑습니다</a>
+    			</li>
 				<li class="dropdown">	
 					<a href="#" class="dropdown-toggle"
 						data-toggle="dropdown" role="buton" aria-haspopup="true"
@@ -200,7 +204,6 @@
 			<%		
 				} 
 			%>
-		
 		</div> 
 	</nav>
 	
